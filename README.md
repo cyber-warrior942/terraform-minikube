@@ -19,19 +19,24 @@ Objective: Deploy a scalable microservice platform (15+ containers) with modular
 Usage (Quick Start)
 
 # Start Minikube
+```
 minikube start --driver=docker --cpus=4 --memory=8192
-
+```
 # Initialize and deploy Terraform
+```
 cd ~/terraform-minikube
 terraform init
 terraform apply
-
+```
 # Verify deployment
+```
 kubectl get pods
 kubectl get hpa
-
+```
 # Chaos test
+```
 kubectl delete pod service-3-xxxxx
+```
 # Pod auto-recreated → zero downtime
 
 # CI/CD Integration
@@ -39,6 +44,8 @@ kubectl delete pod service-3-xxxxx
 GitHub Actions workflow triggers on push or pull request to main.
 Automatically runs:
 
+```
 terraform init
 terraform plan
+```
 Optional: terraform apply can be enabled manually.
