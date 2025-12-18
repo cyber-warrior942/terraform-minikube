@@ -34,14 +34,11 @@ kubectl get hpa
 kubectl delete pod service-3-xxxxx
 # Pod auto-recreated → zero downtime
 
-CI/CD Integration
+# CI/CD Integration
 
 GitHub Actions workflow triggers on push or pull request to main.
-
 Automatically runs:
 
 terraform init
-
 terraform plan
-
 Optional: terraform apply can be enabled manually.
