@@ -117,8 +117,8 @@ GitHub Actions workflow triggers on push or pull request to main.
 Automatically runs:
 
 ```
-```
 terraform init
 terraform plan
 ```
+
 Optional: terraform apply can be enabled manually.
