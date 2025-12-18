@@ -1,22 +1,3 @@
-Project: Terraform + Minikube Microservices Deployment
-
-Objective: Deploy a scalable microservice platform (15+ containers) with modular Terraform, auto-scaling, zero-downtime updates, and zero-trust security, ready for multi-cloud extension.
-
-| Requirement                | Implementation                                                               |
-| -------------------------- | ---------------------------------------------------------------------------- |
-| 15+ Microservices          | Deployed via `modules/microservices` (Nginx pods)                            |
-| Modular Terraform Design   | Separate modules: microservices, autoscaling, secrets; provider-agnostic     |
-| Auto-Scaling (50× traffic) | Horizontal Pod Autoscaler (HPA) monitors CPU and scales pods                 |
-| Zero-Downtime Updates      | Kubernetes self-healing recreates pods automatically                         |
-| Zero-Trust Secrets         | `modules/secrets` manages API keys securely; supports rotation               |
-| Chaos Testing / Failover   | Pod deletion test confirms automatic recovery                                |
-| CI/CD Pipeline             | GitHub Actions workflow: `terraform init` + `terraform plan` on push/PR      |
-| Multi-Cloud Readiness      | Provider abstraction allows AWS, Azure, OpenStack deployment                 |
-| Cost Optimization          | Local Minikube ensures zero cloud cost while demonstrating full architecture |
-| Performance & Scalability  | Easily scales from 15 → 50+ pods; HPA handles dynamic load                   |
-| State Management           | Terraform state files ensure reproducibility and rollback capability         |
-
-README.md
 # Terraform + Minikube Microservices Deployment
 
 ## Overview
@@ -35,7 +16,7 @@ This setup is fully **local** and **zero-cost** using Minikube, ideal for academ
 
 ## Project Structure
 
-
+```
 terraform-minikube/
 │
 ├── main.tf # Root module invoking other modules
@@ -52,7 +33,7 @@ terraform-minikube/
 └── secrets/
 ├── main.tf # Zero-trust secrets
 └── variables.tf
-
+```
 
 ---
 
