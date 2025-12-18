@@ -1,0 +1,37 @@
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Terraform crash logs
+crash.log
+
+# .terraform directories
+.terraform/
+.terraform.lock.hcl
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Kubernetes config (optional, if you want to ignore your local kube config)
+.kube/
+
+# Minikube logs and cache
+minikube/
+*.log
+
+# IDE / Editor files (common)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
