@@ -84,9 +84,12 @@ sudo apt update
 sudo apt install terraform
 terraform -v
 
+
+
+```
+# Start Minikube
 Usage (Quick Start)
 
-# Start Minikube
 ```
 minikube start --driver=docker --cpus=4 --memory=8192
 ```
@@ -105,6 +108,7 @@ kubectl get hpa
 ```
 kubectl delete pod service-3-xxxxx
 ```
+
 # Pod auto-recreated → zero downtime
 
 # CI/CD Integration
